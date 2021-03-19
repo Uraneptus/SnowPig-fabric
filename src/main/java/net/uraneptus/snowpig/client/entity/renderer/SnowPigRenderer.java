@@ -8,6 +8,7 @@ import net.minecraft.client.render.entity.feature.SaddleFeatureRenderer;
 import net.minecraft.client.render.entity.model.PigEntityModel;
 import net.minecraft.util.Identifier;
 import net.uraneptus.snowpig.SnowPig;
+import net.uraneptus.snowpig.client.entity.feature.SnowPigEyesFeature;
 import net.uraneptus.snowpig.common.entities.SnowPigEntity;
 
 @Environment(EnvType.CLIENT)
@@ -18,6 +19,7 @@ public class SnowPigRenderer extends MobEntityRenderer<SnowPigEntity, PigEntityM
     public SnowPigRenderer(EntityRenderDispatcher entityRenderDispatcher) {
         super(entityRenderDispatcher, new PigEntityModel<>(), 0.5f);
         this.addFeature(new SaddleFeatureRenderer<>(this, new PigEntityModel<>(0.5f), new Identifier("textures/entity/pig/pig_saddle.png")));
+        this.addFeature(new SnowPigEyesFeature(this));
     }
 
     @Override
