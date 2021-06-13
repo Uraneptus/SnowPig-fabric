@@ -17,7 +17,6 @@
           "name": "snowpig:entity/entity.snow_pig.ambient2",
           "stream": true
       }
-
     ]
   },
   "entity.snow_pig.hurt": {
@@ -38,7 +37,6 @@
         "name": "snowpig:entity/entity.snow_pig.ambient2",
         "stream": true
       }
-
     ]
   },
   "entity.snow_pig.death": {
@@ -49,7 +47,6 @@
         "name": "snowpig:entity/entity.snow_pig.death",
         "stream": true
       }
-
     ]
   },
   "entity.snow_pig.step": {
@@ -80,7 +77,6 @@
         "name": "snowpig:entity/entity.snow_pig.step4",
         "stream": true
       }
-
     ]
   }
 }
