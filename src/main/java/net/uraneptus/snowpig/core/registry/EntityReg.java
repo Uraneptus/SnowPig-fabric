@@ -19,5 +19,4 @@ public class EntityReg {
         Registry.register(Registry.ENTITY_TYPE, new Identifier(SnowPig.MOD_ID, "snow_pig"), SNOW_PIG);
     }
 
-
 }

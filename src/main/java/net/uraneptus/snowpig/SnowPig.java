@@ -9,6 +9,7 @@ import net.minecraft.world.biome.Biome;
 import net.uraneptus.snowpig.common.entities.SnowPigEntity;
 import net.uraneptus.snowpig.core.registry.EntityReg;
 import net.uraneptus.snowpig.core.registry.ItemReg;
+import net.uraneptus.snowpig.core.registry.SoundReg;
 
 @SuppressWarnings("deprecation")
 public class SnowPig implements ModInitializer {
@@ -19,6 +20,7 @@ public class SnowPig implements ModInitializer {
 	public void onInitialize() {
 		ItemReg.registerItems();
 		EntityReg.registerEntityTypes();
+		SoundReg.registerSounds();
 
 		FabricDefaultAttributeRegistry.register(EntityReg.SNOW_PIG, SnowPigEntity.createMobAttributes());
 
