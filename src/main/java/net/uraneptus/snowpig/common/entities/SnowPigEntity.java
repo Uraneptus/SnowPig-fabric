@@ -24,12 +24,15 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
+import net.uraneptus.snowpig.SnowPig;
+import net.uraneptus.snowpig.core.ModIntegrations;
 import net.uraneptus.snowpig.core.registry.EntityReg;
 import net.uraneptus.snowpig.core.registry.SoundReg;
 import org.jetbrains.annotations.Nullable;
@@ -69,6 +72,16 @@ public class SnowPigEntity extends AnimalEntity implements ItemSteerable, Saddle
 
     public static boolean canSpawn(EntityType<SnowPigEntity> entityType, ServerWorldAccess world, SpawnReason reason, BlockPos pos, Random random) {
         return world.getLightLevel(pos, 0) >8;
+    }
+
+    public static final Identifier FROZEN_HAM_LOOT = new Identifier(SnowPig.MOD_ID, "entities/mod_integration/frozen_ham_loot");
+
+    public Identifier getLootTableId() {
+        if(ModIntegrations.isFDLoaded()) {
+            return FROZEN_HAM_LOOT;
+        } else {
+            return this.getType().getLootTableId();
+        }
     }
 
     @Override

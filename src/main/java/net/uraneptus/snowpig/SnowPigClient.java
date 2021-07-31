@@ -12,8 +12,7 @@ public class SnowPigClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        EntityRendererRegistry.INSTANCE.register(EntityReg.SNOW_PIG, (dispatcher, context) -> {
-            return new SnowPigRenderer(dispatcher);
-        });
+        EntityRendererRegistry.INSTANCE.register(EntityReg.SNOW_PIG, (dispatcher, context) ->
+                new SnowPigRenderer(dispatcher));
     }
 }
