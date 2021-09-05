@@ -1,16 +1,15 @@
 {
-    "type": "minecraft:campfire_cooking",
+    "type": "minecraft:smelting",
     "ingredient": {
         "item": "snowpig:frozen_ham"
     },
     "result": "farmersdelight:ham",
     "experience": 0.2,
-    "cookingtime": 550,
+    "cookingtime": 200,
     "group": "ham_recipe",
-    "conditions":
-    [
+    "conditions": [
         {
-            "type": "forge:mod_loaded",
+            "type": "libcd:mod_loaded",
             "modid": "farmersdelight"
         }
     ]
