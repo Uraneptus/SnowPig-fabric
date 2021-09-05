@@ -14,7 +14,7 @@
   },
 
   "license": "MIT License",
-  "icon": "assets/snowpig/icon.png",
+  "icon": "assets/snowpig/snowpig-icon.png",
 
   "environment": "*",
   "entrypoints": {
