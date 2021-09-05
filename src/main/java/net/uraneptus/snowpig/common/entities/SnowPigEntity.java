@@ -16,7 +16,7 @@ import net.minecraft.entity.passive.PigEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
@@ -33,8 +33,8 @@ import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import net.uraneptus.snowpig.SnowPig;
 import net.uraneptus.snowpig.core.ModIntegrations;
-import net.uraneptus.snowpig.core.registry.EntityReg;
-import net.uraneptus.snowpig.core.registry.SoundReg;
+import net.uraneptus.snowpig.core.registry.EntityRegistry;
+import net.uraneptus.snowpig.core.registry.SoundRegistry;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
@@ -63,7 +63,7 @@ public class SnowPigEntity extends AnimalEntity implements ItemSteerable, Saddle
         this.goalSelector.add(1, new EscapeDangerGoal(this, 1.25D));
         this.goalSelector.add(3, new AnimalMateGoal(this, 1.0D));
         this.goalSelector.add(4, new TemptGoal(this, 1.2D, Ingredient.ofItems(Items.CARROT_ON_A_STICK), false));
-        this.goalSelector.add(4, new TemptGoal(this, 1.2D, false, BREEDING_INGREDIENT));
+        this.goalSelector.add(4, new TemptGoal(this, 1.2D, BREEDING_INGREDIENT, false));
         this.goalSelector.add(5, new FollowParentGoal(this, 1.1D));
         this.goalSelector.add(6, new WanderAroundFarGoal(this, 1.0D));
         this.goalSelector.add(7, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
@@ -86,7 +86,7 @@ public class SnowPigEntity extends AnimalEntity implements ItemSteerable, Saddle
 
     @Override
     public SnowPigEntity createChild(ServerWorld serverWorld, PassiveEntity passiveEntity) {
-        return EntityReg.SNOW_PIG.create(serverWorld);
+        return EntityRegistry.SNOW_PIG.create(serverWorld);
     }
 
     public boolean isBreedingItem(ItemStack stack) {
@@ -110,16 +110,16 @@ public class SnowPigEntity extends AnimalEntity implements ItemSteerable, Saddle
     }
 
     public SoundEvent getAmbientSound() {
-        return SoundReg.SNOW_PIG_AMBIENT;
+        return SoundRegistry.SNOW_PIG_AMBIENT;
     }
     public SoundEvent getHurtSound(DamageSource source) {
-        return SoundReg.SNOW_PIG_HURT;
+        return SoundRegistry.SNOW_PIG_HURT;
     }
     public SoundEvent getDeathSound() {
-        return SoundReg.SNOW_PIG_DEATH;
+        return SoundRegistry.SNOW_PIG_DEATH;
     }
     protected void playStepSound(BlockPos pos, BlockState state) {
-        this.playSound(SoundReg.SNOW_PIG_STEP, 0.15F, 1.0F);
+        this.playSound(SoundRegistry.SNOW_PIG_STEP, 0.15F, 1.0F);
     }
 
     @Nullable
@@ -150,14 +150,14 @@ public class SnowPigEntity extends AnimalEntity implements ItemSteerable, Saddle
         this.dataTracker.startTracking(BOOST_TIME, 0);
     }
 
-    public void writeCustomDataToTag(CompoundTag tag) {
-        super.writeCustomDataToTag(tag);
-        this.saddledComponent.toTag(tag);
+    public void writeCustomDataToNbt(NbtCompound tag) {
+        super.writeCustomDataToNbt(tag);
+        this.saddledComponent.writeNbt(tag);
     }
 
-    public void readCustomDataFromTag(CompoundTag tag) {
-        super.readCustomDataFromTag(tag);
-        this.saddledComponent.fromTag(tag);
+    public void readCustomDataFromNbt(NbtCompound tag) {
+        super.readCustomDataFromNbt(tag);
+        this.saddledComponent.readNbt(tag);
     }
 
     public ActionResult interactMob(PlayerEntity player, Hand hand) {
