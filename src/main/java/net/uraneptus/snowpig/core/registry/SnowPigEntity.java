@@ -7,7 +7,6 @@ import net.minecraft.entity.SpawnGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.uraneptus.snowpig.SnowPig;
-import net.uraneptus.snowpig.common.entities.SnowPigEntity;
 
 public class SnowPigEntity {
     public static final EntityType<net.uraneptus.snowpig.common.entities.SnowPigEntity> SNOW_PIG = FabricEntityTypeBuilder
