@@ -33,8 +33,7 @@ import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import net.uraneptus.snowpig.SnowPig;
 import net.uraneptus.snowpig.core.ModIntegrations;
-import net.uraneptus.snowpig.core.registry.EntityRegistry;
-import net.uraneptus.snowpig.core.registry.SoundRegistry;
+import net.uraneptus.snowpig.core.registry.SnowPigSounds;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
@@ -86,7 +85,7 @@ public class SnowPigEntity extends AnimalEntity implements ItemSteerable, Saddle
 
     @Override
     public SnowPigEntity createChild(ServerWorld serverWorld, PassiveEntity passiveEntity) {
-        return EntityRegistry.SNOW_PIG.create(serverWorld);
+        return net.uraneptus.snowpig.core.registry.SnowPigEntity.SNOW_PIG.create(serverWorld);
     }
 
     public boolean isBreedingItem(ItemStack stack) {
@@ -110,16 +109,16 @@ public class SnowPigEntity extends AnimalEntity implements ItemSteerable, Saddle
     }
 
     public SoundEvent getAmbientSound() {
-        return SoundRegistry.SNOW_PIG_AMBIENT;
+        return SnowPigSounds.SNOW_PIG_AMBIENT;
     }
     public SoundEvent getHurtSound(DamageSource source) {
-        return SoundRegistry.SNOW_PIG_HURT;
+        return SnowPigSounds.SNOW_PIG_HURT;
     }
     public SoundEvent getDeathSound() {
-        return SoundRegistry.SNOW_PIG_DEATH;
+        return SnowPigSounds.SNOW_PIG_DEATH;
     }
     protected void playStepSound(BlockPos pos, BlockState state) {
-        this.playSound(SoundRegistry.SNOW_PIG_STEP, 0.15F, 1.0F);
+        this.playSound(SnowPigSounds.SNOW_PIG_STEP, 0.15F, 1.0F);
     }
 
     @Nullable

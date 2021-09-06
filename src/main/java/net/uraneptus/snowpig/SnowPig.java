@@ -8,10 +8,9 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRe
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.Biome;
-import net.uraneptus.snowpig.common.entities.SnowPigEntity;
-import net.uraneptus.snowpig.core.registry.EntityRegistry;
-import net.uraneptus.snowpig.core.registry.ItemRegistry;
-import net.uraneptus.snowpig.core.registry.SoundRegistry;
+import net.uraneptus.snowpig.core.registry.SnowPigEntity;
+import net.uraneptus.snowpig.core.registry.SnowPigItems;
+import net.uraneptus.snowpig.core.registry.SnowPigSounds;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -26,15 +25,15 @@ public class SnowPig implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		Reflection.initialize(
-				ItemRegistry.class
+				SnowPigItems.class
 		);
 
-		EntityRegistry.registerEntityTypes();
-		SoundRegistry.registerSounds();
+		SnowPigEntity.registerEntityTypes();
+		SnowPigSounds.registerSounds();
 
-		FabricDefaultAttributeRegistry.register(EntityRegistry.SNOW_PIG, SnowPigEntity.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(SnowPigEntity.SNOW_PIG, net.uraneptus.snowpig.common.entities.SnowPigEntity.createMobAttributes());
 
-		BiomeModifications.addSpawn(BiomeSelectors.categories(Biome.Category.ICY), SpawnGroup.CREATURE, EntityRegistry.SNOW_PIG, 20, 1, 4);
+		BiomeModifications.addSpawn(BiomeSelectors.categories(Biome.Category.ICY), SpawnGroup.CREATURE, SnowPigEntity.SNOW_PIG, 20, 1, 4);
 
 		log(Level.INFO, "Snowing The Pig!");
 	}
