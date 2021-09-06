@@ -5,7 +5,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.uraneptus.snowpig.SnowPig;
 
-public class SoundRegistry {
+public class SnowPigSounds {
     public static final Identifier SNOW_PIG_AMBIENT_ID = new Identifier(SnowPig.MOD_ID, "entity.snow_pig.ambient");
     public static final SoundEvent SNOW_PIG_AMBIENT = new SoundEvent(SNOW_PIG_AMBIENT_ID);
 

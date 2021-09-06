@@ -9,9 +9,9 @@ import net.minecraft.util.registry.Registry;
 import net.uraneptus.snowpig.SnowPig;
 import net.uraneptus.snowpig.common.entities.SnowPigEntity;
 
-public class EntityRegistry {
-    public static final EntityType<SnowPigEntity> SNOW_PIG = FabricEntityTypeBuilder
-            .create(SpawnGroup.CREATURE, SnowPigEntity::new)
+public class SnowPigEntity {
+    public static final EntityType<net.uraneptus.snowpig.common.entities.SnowPigEntity> SNOW_PIG = FabricEntityTypeBuilder
+            .create(SpawnGroup.CREATURE, net.uraneptus.snowpig.common.entities.SnowPigEntity::new)
             .dimensions(EntityDimensions.fixed(0.9f, 0.9f)).build();
 
     public static void registerEntityTypes() {
