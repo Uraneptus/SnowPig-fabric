@@ -18,6 +18,10 @@ repositories {
 		name = 'Shedaniel Maven'
 		url "https://maven.shedaniel.me/"
 	}
+	maven {
+		name = "Cotton"
+		url = "https://server.bbkr.space/artifactory/libs-release"
+	}
 }
 
 dependencies {
@@ -26,8 +30,13 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
+	// Farmers Delight
 	modCompileOnly "com.nhoryzon.mc:farmers-delight-fabric-0.1.1"
 	modRuntime "com.nhoryzon.mc:farmers-delight-fabric-0.1.1"
+
+	//LibCD
+	modApi "io.github.cottonmc:LibCD:${project.libcd_version}"
+	include "io.github.cottonmc:LibCD:${project.libcd_version}"
 }
 
 processResources {
