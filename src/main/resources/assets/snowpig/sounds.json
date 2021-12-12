@@ -78,5 +78,14 @@
         "stream": true
       }
     ]
+  },
+  "music_disc.frosty_snig": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "snowpig:records/frosty_snig",
+        "stream": true
+      }
+    ]
   }
 }

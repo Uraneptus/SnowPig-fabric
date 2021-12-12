@@ -1,0 +1,3 @@
+accessWidener   v1  named
+
+accessible method net/minecraft/item/MusicDiscItem <init> (ILnet/minecraft/sound/SoundEvent;Lnet/minecraft/item/Item$Settings;)V
