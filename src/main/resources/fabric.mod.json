@@ -13,7 +13,7 @@
     "sources": ""
   },
 
-  "license": "MIT",
+  "license": "gpl-3.0",
   "icon": "assets/snowpig/snowpig-icon.png",
 
   "environment": "*",
@@ -25,7 +25,7 @@
       "net.uraneptus.snowpig.SnowPigClient"
     ]
   },
-
+  "accessWidener" : "snow-pig.accesswidener",
   "depends": {
     "fabricloader": ">=0.11.3",
     "fabric": "*",

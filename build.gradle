@@ -22,6 +22,10 @@ repositories {
 		name = "Cotton"
 		url = "https://server.bbkr.space/artifactory/libs-release"
 	}
+	maven {
+		name = 'Curse Maven'
+		url = "https://www.cursemaven.com"
+	}
 }
 
 dependencies {
@@ -31,12 +35,19 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	// Farmers Delight
-	modCompileOnly "com.nhoryzon.mc:farmers-delight-fabric-0.1.1"
-	modRuntime "com.nhoryzon.mc:farmers-delight-fabric-0.1.1"
+	modCompileOnly "curse.maven:farmers-delight-fabric-482834:3531640"
+	modRuntime "curse.maven:farmers-delight-fabric-482834:3531640"
 
 	//LibCD
 	modApi "io.github.cottonmc:LibCD:${project.libcd_version}"
 	include "io.github.cottonmc:LibCD:${project.libcd_version}"
+
+	//Runtime Utilities
+	modRuntime "me.shedaniel:RoughlyEnoughItems-fabric:6.2.347"
+}
+
+loom {
+	accessWidener file("src/main/resources/${project.archives_base_name}.accesswidener")
 }
 
 processResources {
