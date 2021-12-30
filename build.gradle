@@ -1,19 +1,18 @@
 plugins {
-	id 'fabric-loom' version '0.9-SNAPSHOT'
+	id 'fabric-loom' version '0.10-SNAPSHOT'
 	id 'maven-publish'
 }
 
-sourceCompatibility = JavaVersion.VERSION_16
-targetCompatibility = JavaVersion.VERSION_16
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
 
 archivesBaseName = project.archives_base_name
-version = project.mod_version
 group = project.maven_group
+version = System.env.GITHUB_ACTIONS == "true"
+		? "${project.mod_version}+build.${System.env.GITHUB_RUN_NUMBER}"
+		: project.mod_version
 
 repositories {
-	flatDir {
-		dirs 'libs'
-	}
 	maven {
 		name = 'Shedaniel Maven'
 		url "https://maven.shedaniel.me/"
@@ -26,27 +25,36 @@ repositories {
 		name = 'Curse Maven'
 		url = "https://www.cursemaven.com"
 	}
+	maven {
+		url 'https://jitpack.io'
+	}
+	maven {
+		url 'https://maven.terraformersmc.com/'
+	}
+	maven {
+		url "https://maven.ryanliptak.com/"
+	}
 }
 
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+	mappings "net.fabricmc:yarn:${project.minecraft_version}+build.${project.yarn_build}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	// Farmers Delight
-	modCompileOnly "curse.maven:farmers-delight-fabric-482834:3531640"
-	modRuntime "curse.maven:farmers-delight-fabric-482834:3531640"
+	modCompileOnly "curse.maven:farmers-delight-fabric-482834:3559302"
+	modRuntime "curse.maven:farmers-delight-fabric-482834:3559302"
 
-	//LibCD
-	modApi "io.github.cottonmc:LibCD:${project.libcd_version}"
-	include "io.github.cottonmc:LibCD:${project.libcd_version}"
+	//DawnApi
+	modApi "com.github.DawnTeamMC:DawnAPI:v${dawn_version}"
+	include "com.github.DawnTeamMC:DawnAPI:v${dawn_version}"
 
 	//Runtime Utilities
-	modRuntime "me.shedaniel:RoughlyEnoughItems-fabric:6.2.347"
+	modRuntime "me.shedaniel:RoughlyEnoughItems-fabric:7.1.356"
 }
-
 loom {
+
 	accessWidener file("src/main/resources/${project.archives_base_name}.accesswidener")
 }
 
@@ -59,9 +67,7 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-	it.options.encoding = "UTF-8"
-
-	it.options.release = 16
+	it.options.release = 17
 }
 
 java {
@@ -77,15 +83,9 @@ jar {
 publishing {
 	publications {
 		mavenJava(MavenPublication) {
-			artifact(remapJar) {
-				builtBy remapJar
-			}
-			artifact(sourcesJar) {
-				builtBy remapSourcesJar
-			}
+			from components.java
 		}
 	}
 
-	repositories {
-	}
+	repositories {}
 }

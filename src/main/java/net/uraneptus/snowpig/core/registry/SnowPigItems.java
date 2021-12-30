@@ -9,6 +9,7 @@ import net.uraneptus.snowpig.SnowPig;
 import net.uraneptus.snowpig.common.items.FrozenHam;
 import net.uraneptus.snowpig.core.ModIntegrations;
 
+@SuppressWarnings("unused")
 public class SnowPigItems {
     public static final Item FROZEN_PORKCHOP = register("frozen_porkchop", new Item(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.3f).meat().statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 100, 2), 1.0f).build())));
     public static final Item FROZEN_HAM = register("frozen_ham", new FrozenHam(2, -1.2F, new Item.Settings().group(ModIntegrations.isFDLoaded() ? ModIntegrations.getFdItemGroup() : ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.3f).statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 100, 2), 1.0f).build())));

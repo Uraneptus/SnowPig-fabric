@@ -40,6 +40,26 @@
           "name": "snowpig:frozen_porkchop"
         }
       ]
+    },
+    {
+      "rolls": 1,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "snowpig:music_disc_frosty_snig",
+          "expand": true
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "predicate": {
+            "type": "minecraft:stray"
+          },
+          "entity": "killer"
+        }
+      ]
     }
   ]
 }

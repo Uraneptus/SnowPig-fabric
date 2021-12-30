@@ -27,5 +27,4 @@ public class SnowPigEyesFeature extends FeatureRenderer<SnowPigEntity, PigEntity
         VertexConsumer vertexConsumer = vertexConsumers.getBuffer(TEXTURE);
         this.getContextModel().render(matrices, vertexConsumer, 0, OverlayTexture.DEFAULT_UV, 1.0f, 1.0f, 1.0f, 1.0f);
     }
-
 }
