@@ -15,7 +15,6 @@ import net.uraneptus.snowpig.common.entities.SnowPigEntity;
 
 @Environment(EnvType.CLIENT)
 public class SnowPigRenderer extends MobEntityRenderer<SnowPigEntity, PigEntityModel<SnowPigEntity>> {
-
     protected static final Identifier TEXTURE = new Identifier(SnowPig.MOD_ID, "textures/entity/snow_pig.png");
 
     public SnowPigRenderer(EntityRendererFactory.Context context) {
