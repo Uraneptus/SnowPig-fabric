@@ -47,8 +47,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "snowpig:music_disc_frosty_snig",
-          "expand": true
+          "name": "snowpig:music_disc_frosty_snig"
         }
       ],
       "conditions": [
