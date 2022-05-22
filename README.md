@@ -11,6 +11,6 @@
   <a href="https://discord.gg/HZFXtcG2Ty"><img src="https://img.shields.io/discord/804423500580388905?label=&color=7096aa&labelColor=55778c&logo=Discord&logoColor=7096aa&style=for-the-badge"></a>
     <a href="https://twitter.com/uraneptus2"><img src="https://img.shields.io/twitter/follow/uraneptus2?label=&color=7096aa&labelColor=55778c&logo=Twitter&logoColor=7096aa&style=for-the-badge"></a>
   <a href="https://www.curseforge.com/minecraft/mc-mods/snow-pig-fabric"><img src="http://cf.way2muchnoise.eu/469594.svg?badge_style=for_the_badge"></a>
-    <a href="https://github.com/Uraneptus/SnowPig-fabric/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Uraneptus/SnowPig-fabric?style=for-the-badge&color=7096aa&labelColor=55778c"></a>
+    <a href="https://github.com/Uraneptus/SnowPig-fabric/blob/main/LICENSE"><img src="https://img.shields.io/github/license/JustinPlayzz/SnowPig-Fabric?style=for-the-badge&color=7096aa&labelColor=55778c"></a>
     <a href="https://www.curseforge.com/minecraft/mc-mods/snow-pig-fabric"><img src="http://cf.way2muchnoise.eu/versions/469594.svg?badge_style=for_the_badge"></a>
 </p>
