@@ -15,7 +15,7 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@SuppressWarnings("deprecation")
+@SuppressWarnings("UnstableApiUsage")
 public class SnowPig implements ModInitializer {
 	public static Logger LOGGER = LogManager.getLogger();
 

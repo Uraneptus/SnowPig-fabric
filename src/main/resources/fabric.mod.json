@@ -10,7 +10,7 @@
   ],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/snow-pig-fabric",
-    "sources": ""
+    "sources": "https://github.com/Uraneptus/SnowPig-fabric"
   },
 
   "license": "gpl-3.0",
@@ -25,6 +25,9 @@
       "net.uraneptus.snowpig.SnowPigClient"
     ]
   },
+  "mixins": [
+    "snowpig.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=0.14.5",
     "fabric": "*",
