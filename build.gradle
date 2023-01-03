@@ -14,15 +14,8 @@ version = System.env.GITHUB_ACTIONS == "true"
 
 repositories {
 	maven {
-		name = 'Shedaniel Maven'
-		url "https://maven.shedaniel.me/"
-	}
-	maven {
 		name = 'Curse Maven'
 		url = "https://www.cursemaven.com"
-	}
-	maven {
-		url 'https://maven.terraformersmc.com/'
 	}
 	flatDir {
 		dirs 'libs'
@@ -36,16 +29,14 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	// Farmers Delight
-	modCompileOnly "curse.maven:farmers-delight-fabric-482834:3770564"
-	modRuntimeOnly "curse.maven:farmers-delight-fabric-482834:3770564"
+	modCompileOnly "curse.maven:farmers-delight-fabric-482834:${project.fd_id}"
+	modRuntimeOnly "curse.maven:farmers-delight-fabric-482834:${project.fd_id}"
 
 	// DisableCustomWorldsAdvice
 	modImplementation "com.rdvdev2.disablecustomworldsadvice:DisableCustomWorldsAdvice-2.0"
 	include "com.rdvdev2.disablecustomworldsadvice:DisableCustomWorldsAdvice-2.0"
-
-	//Runtime Utilities
-	//modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:7.1.356"
 }
+
 loom {
 	//accessWidenerPath = file("src/main/resources/${project.archives_base_name}.accesswidener")
 }

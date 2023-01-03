@@ -9,7 +9,7 @@ public class ModIntegrations {
         return FabricLoader.getInstance().getModContainer("farmersdelight").isPresent();
     }
 
-    public static final ItemGroup getFdItemGroup() {
+    public static ItemGroup getFdItemGroup() {
         return FarmersDelightMod.ITEM_GROUP;
     }
 }

@@ -90,10 +90,10 @@
       "conditions": [
         {
           "condition": "minecraft:entity_properties",
+          "entity": "killer",
           "predicate": {
-            "type": "minecraft:stray"
-          },
-          "entity": "killer"
+            "type": "#snowpig:killer_for_snowpig_disc"
+          }
         }
       ]
     }
