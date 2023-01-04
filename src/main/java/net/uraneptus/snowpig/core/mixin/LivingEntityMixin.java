@@ -19,7 +19,7 @@ public abstract class LivingEntityMixin extends Entity {
 
     @Inject(method = "tickMovement()V", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;damage(Lnet/minecraft/entity/damage/DamageSource;F)Z", ordinal = 0), cancellable = true)
     private void snowpig_tickMovement(CallbackInfo tickMovement) {
-        if (this.getType() == SnowPigEntity.SNOW_PIG) {
+        if (this.getType() == EntityType.PIG) {
             tickMovement.cancel();
         }
     }

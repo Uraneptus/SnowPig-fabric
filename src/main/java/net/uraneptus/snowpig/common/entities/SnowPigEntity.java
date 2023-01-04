@@ -14,6 +14,7 @@ import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.PigEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
@@ -38,6 +39,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
+//TODO create event to access the pig's tick method for the transformation to the snowpig
 public class SnowPigEntity extends AnimalEntity implements ItemSteerable, Saddleable {
     private static final TrackedData<Boolean> SADDLED;
     private static final TrackedData<Integer> BOOST_TIME;
@@ -70,7 +72,7 @@ public class SnowPigEntity extends AnimalEntity implements ItemSteerable, Saddle
     }
 
     public static boolean canSpawn(EntityType<SnowPigEntity> entityType, ServerWorldAccess world, SpawnReason reason, BlockPos pos, Random random) {
-        return world.getLightLevel(pos, 0) >8;
+        return world.getLightLevel(pos, 0) > 8;
     }
 
     public static final Identifier FROZEN_HAM_LOOT = new Identifier(SnowPig.MOD_ID, "entities/mod_integration/frozen_ham_loot");
@@ -226,9 +228,13 @@ public class SnowPigEntity extends AnimalEntity implements ItemSteerable, Saddle
         return super.updatePassengerForDismount(passenger);
     }
 
+    public boolean canFreeze() {
+        return false;
+    }
+
     static {
-        SADDLED = DataTracker.registerData(PigEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
-        BOOST_TIME = DataTracker.registerData(PigEntity.class, TrackedDataHandlerRegistry.INTEGER);
+        SADDLED = DataTracker.registerData(SnowPigEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+        BOOST_TIME = DataTracker.registerData(SnowPigEntity.class, TrackedDataHandlerRegistry.INTEGER);
         BREEDING_INGREDIENT = Ingredient.ofItems(Items.CARROT, Items.POTATO, Items.BEETROOT);
     }
 }
