@@ -3,7 +3,6 @@ package net.uraneptus.snowpig.core.mixin;
 import net.minecraft.client.render.entity.LivingEntityRenderer;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.PigEntity;
-import net.uraneptus.snowpig.common.entities.SnowPigEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

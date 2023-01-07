@@ -20,6 +20,10 @@ repositories {
 	flatDir {
 		dirs 'libs'
 	}
+	maven {
+		name = 'Ladysnake Mods'
+		url = 'https://ladysnake.jfrog.io/artifactory/mods'
+	}
 }
 
 dependencies {
