@@ -15,7 +15,7 @@ public class SnowPigItems {
     public static final Item FROZEN_PORKCHOP = register("frozen_porkchop", new Item(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.3f).meat().statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 100, 2), 1.0f).build())));
     public static final Item FROZEN_HAM = register("frozen_ham", new FrozenHam(2, -1.2F, new Item.Settings().group(ModIntegrations.isFDLoaded() ? ModIntegrations.getFdItemGroup() : ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.3f).statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 100, 2), 1.0f).build())));
     public static final SpawnEggItem SNOW_PIG_EGG = register("snow_pig_spawn_egg", new SpawnEggItem(SnowPigEntity.SNOW_PIG, 0x70CFF3, 0xE2FBFA, new Item.Settings().group(ItemGroup.MISC)));
-    public static Item MUSIC_DISC_FROSTY_SNIG = register("music_disc_frosty_snig", new SnowPigMusicDiscItem(12, SnowPigSounds.MUSIC_DISC_FROSTY_SNIG, new Item.Settings().group(ItemGroup.MISC).maxCount(1).rarity(Rarity.RARE)));
+    public static Item MUSIC_DISC_FROSTY_SNIG = register("music_disc_frosty_snig", new SnowPigMusicDiscItem(12, SnowPigSounds.MUSIC_DISC_FROSTY_SNIG, new Item.Settings().group(ItemGroup.MISC).maxCount(1).rarity(Rarity.RARE), 3720));
 
     public static <T extends Item> T register(String path, T item) {
         Registry.register(Registry.ITEM, SnowPig.id(path), item);

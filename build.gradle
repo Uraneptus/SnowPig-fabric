@@ -37,8 +37,11 @@ dependencies {
 	modRuntimeOnly "curse.maven:farmers-delight-fabric-482834:${project.fd_id}"
 
 	// DisableCustomWorldsAdvice
-	modImplementation "com.rdvdev2.disablecustomworldsadvice:DisableCustomWorldsAdvice-2.0"
-	include "com.rdvdev2.disablecustomworldsadvice:DisableCustomWorldsAdvice-2.0"
+	modImplementation "com.rdvdev2.disablecustomworldsadvice:DisableCustomWorldsAdvice-3.0"
+	include "com.rdvdev2.disablecustomworldsadvice:DisableCustomWorldsAdvice-3.0"
+
+	//Tags
+	modImplementation(include("io.github.fabricators_of_create.Porting-Lib:tags-2.0.591+1.19.2"))
 }
 
 loom {
