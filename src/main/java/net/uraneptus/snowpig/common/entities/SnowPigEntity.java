@@ -32,6 +32,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 import net.uraneptus.snowpig.SnowPig;
 import net.uraneptus.snowpig.core.ModIntegrations;
 import net.uraneptus.snowpig.core.registry.SnowPigSounds;
@@ -57,6 +58,11 @@ public class SnowPigEntity extends AnimalEntity implements ItemSteerable, Saddle
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 10.0D)
                 .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 0.3D)
                 .add(EntityAttributes.GENERIC_ARMOR, 0.5D);
+    }
+
+    @Override
+    public boolean canSpawn(WorldAccess world, SpawnReason spawnReason) {
+        return super.canSpawn(world, spawnReason);
     }
 
     protected void initGoals() {
