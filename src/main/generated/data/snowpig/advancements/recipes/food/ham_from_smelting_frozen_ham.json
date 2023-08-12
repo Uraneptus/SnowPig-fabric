@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_frozen_ham": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "snowpig:frozen_ham"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:ham_from_smelting_frozen_ham"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_frozen_ham",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:ham_from_smelting_frozen_ham"
+    ]
+  },
+  "sends_telemetry_event": false
+}

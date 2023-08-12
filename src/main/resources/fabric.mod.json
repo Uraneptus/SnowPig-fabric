@@ -21,6 +21,9 @@
 
   "environment": "*",
   "entrypoints": {
+      "fabric-datagen": [
+        "net.uraneptus.snowpig.SnowPigDataGeneration"
+      ],
     "main": [
       "net.uraneptus.snowpig.SnowPig"
     ],
@@ -34,7 +37,7 @@
   "depends": {
     "fabricloader": ">=0.14.9",
     "fabric": "*",
-    "minecraft": "1.19.x",
+    "minecraft": "1.20.*",
     "java": ">=17"
   },
   "suggests": {
