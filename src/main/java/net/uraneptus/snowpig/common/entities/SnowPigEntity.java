@@ -30,6 +30,7 @@ public class SnowPigEntity extends PigEntity{
 
     @Override
     public void onStruckByLightning(ServerWorld world, LightningEntity lightning) {
+
     }
     public static final Identifier FROZEN_HAM_LOOT = new Identifier(SnowPig.MOD_ID, "entities/mod_integration/frozen_ham_loot");
 

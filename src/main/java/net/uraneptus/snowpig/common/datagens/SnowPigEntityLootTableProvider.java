@@ -54,33 +54,33 @@ public class SnowPigEntityLootTableProvider extends SimpleFabricLootTableProvide
                         .conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityTarget.KILLER,
                                 EntityPredicate.Builder.create().type(SnowPigEntityTags.KILLER_FOR_SNOWPIG_DISC))))
         );
-
-
-        exporter.accept(Registries.ENTITY_TYPE.getId(SnowPigEntityTypes.SNOW_PIG).withPrefixedPath("entities/"), LootTable.builder()
-
-                /*
-                    Frozen Porkchop Pool
-                 */
-                .pool(LootPool.builder().rolls(ConstantLootNumberProvider.create(2.0F)).with(ItemEntry.builder(SnowPigItems.FROZEN_PORKCHOP)
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(0.0F, 2.0F)))
-                        .apply(FurnaceSmeltLootFunction.builder().conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityTarget.THIS,
-                                NEEDS_ENTITY_ON_FIRE))).apply(LootingEnchantLootFunction.builder(UniformLootNumberProvider.create(0.0F, 1.0F)))))
-
-                /*
-                    Frozen Ham Pool
-                 */
-                .pool(LootPool.builder().with(ItemEntry.builder(SnowPigItems.FROZEN_HAM))
-                        .conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityTarget.KILLER, EntityPredicate.Builder.create().equipment(EntityEquipmentPredicate.Builder.create().mainhand(ItemPredicate.Builder.create().tag(ItemTags.SWORDS).build()).build())))
-                        .conditionally(RandomChanceWithLootingLootCondition.builder(0.5F, 0.1F))
-                        .build())
-
-                /*
-                    Music Disc Pool
-                 */
-                .pool(LootPool.builder().with(ItemEntry.builder(SnowPigItems.MUSIC_DISC_FROSTY_SNIG))
-                        .conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityTarget.KILLER,
-                                EntityPredicate.Builder.create().type(SnowPigEntityTags.KILLER_FOR_SNOWPIG_DISC))))
-        );
+//
+//
+//        exporter.accept(Registries.ENTITY_TYPE.getId(SnowPigEntityTypes.SNOW_PIG).withPrefixedPath("entities/"), LootTable.builder()
+//
+//                /*
+//                    Frozen Porkchop Pool
+//                 */
+//                .pool(LootPool.builder().rolls(ConstantLootNumberProvider.create(2.0F)).with(ItemEntry.builder(SnowPigItems.FROZEN_PORKCHOP)
+//                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(0.0F, 2.0F)))
+//                        .apply(FurnaceSmeltLootFunction.builder().conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityTarget.THIS,
+//                                NEEDS_ENTITY_ON_FIRE))).apply(LootingEnchantLootFunction.builder(UniformLootNumberProvider.create(0.0F, 1.0F)))))
+//
+//                /*
+//                    Frozen Ham Pool
+//                 */
+//                .pool(LootPool.builder().with(ItemEntry.builder(SnowPigItems.FROZEN_HAM))
+//                        .conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityTarget.KILLER, EntityPredicate.Builder.create().equipment(EntityEquipmentPredicate.Builder.create().mainhand(ItemPredicate.Builder.create().tag(ItemTags.SWORDS).build()).build())))
+//                        .conditionally(RandomChanceWithLootingLootCondition.builder(0.5F, 0.1F))
+//                        .build())
+//
+//                /*
+//                    Music Disc Pool
+//                 */
+//                .pool(LootPool.builder().with(ItemEntry.builder(SnowPigItems.MUSIC_DISC_FROSTY_SNIG))
+//                        .conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityTarget.KILLER,
+//                                EntityPredicate.Builder.create().type(SnowPigEntityTags.KILLER_FOR_SNOWPIG_DISC))))
+//        );
     }
 
 }
