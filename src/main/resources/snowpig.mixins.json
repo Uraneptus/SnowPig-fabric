@@ -4,8 +4,10 @@
   "package": "net.uraneptus.snowpig.core.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+  "LivingEntityMixin"
   ],
   "client": [
+  "LivingEntityRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1
