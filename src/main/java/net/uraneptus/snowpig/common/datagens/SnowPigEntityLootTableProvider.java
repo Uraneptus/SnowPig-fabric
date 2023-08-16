@@ -43,7 +43,7 @@ public class SnowPigEntityLootTableProvider extends SimpleFabricLootTableProvide
                     Porkchop Pool
                  */
                 .pool(LootPool.builder().rolls(ConstantLootNumberProvider.create(2.0F)).with(ItemEntry.builder(SnowPigItems.FROZEN_PORKCHOP)
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(0.0F, 2.0F)))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 3.0F)))
                         .apply(FurnaceSmeltLootFunction.builder().conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityTarget.THIS,
                                 NEEDS_ENTITY_ON_FIRE))).apply(LootingEnchantLootFunction.builder(UniformLootNumberProvider.create(0.0F, 1.0F)))))
 

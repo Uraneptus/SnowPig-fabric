@@ -18,8 +18,8 @@ import net.uraneptus.snowpig.core.ModIntegrations;
 import net.uraneptus.snowpig.core.registry.SnowPigSounds;
 
 //TODO create event to access the pig's tick method for the transformation to the snowpig
-public class SnowPigEntity extends PigEntity{
-    public SnowPigEntity(EntityType<? extends PigEntity> entityType, World world) {
+public class SnowPigEntity extends PigEntity {
+    public SnowPigEntity(EntityType<? extends SnowPigEntity> entityType, World world) {
         super(entityType, world);
     }
 
@@ -49,6 +49,7 @@ public class SnowPigEntity extends PigEntity{
                 .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 0.3D)
                 .add(EntityAttributes.GENERIC_ARMOR, 0.5D);
     }
+
 
     @Override
     public float getMovementSpeed() {

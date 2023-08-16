@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "snowpig:frozen_ham"
+  },
+  "result": "farmersdelight:smoked_ham",
+  "experience": 0.2,
+  "cookingtime": 150,
+  "group": "ham_recipe",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "farmersdelight"
+      ]
+    }
+  ]
+}
