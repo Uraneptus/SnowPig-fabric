@@ -11,6 +11,7 @@ public class SnowPigDataGeneration implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
         pack.addProvider(SnowPigEntityLootTableProvider::new);
+        pack.addProvider(SnowPigModelProvider::new);
         pack.addProvider(SnowPigBiomeTagProvider::new);
         pack.addProvider(SnowPigEntityTagProvider::new);
         pack.addProvider(SnowPigItemTagProvider::new);

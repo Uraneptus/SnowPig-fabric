@@ -6,5 +6,7 @@
   "ingredient": {
     "item": "snowpig:frozen_porkchop"
   },
-  "result": "minecraft:porkchop"
+  "result": {
+    "id": "minecraft:porkchop"
+  }
 }

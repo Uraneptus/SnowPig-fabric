@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "snowpig:frozen_porkchop"
-            ]
+            "items": "snowpig:frozen_porkchop"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_frozen_porkchop",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_frozen_porkchop"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:porkchop_from_campfire_cooking_frozen_porkchop"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -51,6 +51,34 @@
           "condition": "minecraft:entity_properties",
           "entity": "killer",
           "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": "#c:tools/knives"
+              }
+            }
+          }
+        },
+        {
+          "chance": 0.5,
+          "condition": "minecraft:random_chance_with_looting",
+          "looting_multiplier": 0.1
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "snowpig:frozen_ham"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "killer",
+          "predicate": {
             "type": "#snowpig:killer_for_snowpig_disc"
           }
         }

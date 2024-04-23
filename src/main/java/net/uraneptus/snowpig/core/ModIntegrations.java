@@ -1,8 +1,6 @@
 package net.uraneptus.snowpig.core;
 
-import com.nhoryzon.mc.farmersdelight.registry.ItemsRegistry;
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;

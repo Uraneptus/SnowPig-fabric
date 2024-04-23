@@ -34,14 +34,6 @@ public class SnowPigEntity extends PigEntity{
     }
     public static final Identifier FROZEN_HAM_LOOT = new Identifier(SnowPig.MOD_ID, "entities/mod_integration/frozen_ham_loot");
 
-    public Identifier getLootTableId() {
-        if(ModIntegrations.isFDLoaded()) {
-            return FROZEN_HAM_LOOT;
-        } else {
-            return this.getType().getLootTableId();
-        }
-    }
-
     public static DefaultAttributeContainer.Builder createSnowPigAttributes() {
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.15D)

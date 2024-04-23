@@ -1,11 +1,12 @@
 package net.uraneptus.snowpig;
 
-import me.alphamode.forgetags.Tags;
+
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
+import net.minecraft.registry.tag.BiomeTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.Biome;
@@ -13,6 +14,7 @@ import net.uraneptus.snowpig.common.entities.SnowPigEntity;
 import net.uraneptus.snowpig.core.registry.SnowPigEntityTypes;
 import net.uraneptus.snowpig.core.registry.SnowPigItems;
 import net.uraneptus.snowpig.core.registry.SnowPigSounds;
+import net.uraneptus.snowpig.core.tags.SnowPigBiomeTags;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -29,7 +31,7 @@ public class SnowPig implements ModInitializer {
 		SnowPigEntityTypes.registerEntityTypes();
 		SnowPigSounds.registerSounds();
 
-		addMobSpawn(Tags.Biomes.IS_SNOWY, SpawnGroup.CREATURE, SnowPigEntityTypes.SNOW_PIG, 20, 1, 4);
+		addMobSpawn(SnowPigBiomeTags.SPAWNS_SNOW_PIG, SpawnGroup.CREATURE, SnowPigEntityTypes.SNOW_PIG, 20, 1, 4);
 
 		FabricDefaultAttributeRegistry.register(SnowPigEntityTypes.SNOW_PIG, SnowPigEntity.createMobAttributes());
 
