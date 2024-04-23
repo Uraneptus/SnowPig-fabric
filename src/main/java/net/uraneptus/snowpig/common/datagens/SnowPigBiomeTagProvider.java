@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeKeys;
 import net.uraneptus.snowpig.core.tags.SnowPigBiomeTags;
@@ -35,6 +36,7 @@ public class SnowPigBiomeTagProvider extends FabricTagProvider<Biome> {
                 .add(BiomeKeys.FROZEN_PEAKS)
                 .add(BiomeKeys.JAGGED_PEAKS)
                 .add(BiomeKeys.SNOWY_SLOPES)
-                .add(BiomeKeys.GROVE);
+                .add(BiomeKeys.GROVE)
+        ;
     }
 }
