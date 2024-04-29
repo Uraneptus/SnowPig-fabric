@@ -43,6 +43,7 @@ public abstract class LivingEntityMixin extends Entity {
                     }
                     if (freezeTicks == 0) {
                         pig.convertTo(SnowPigEntityTypes.SNOW_PIG, true);
+
                     }
                 }
             }
