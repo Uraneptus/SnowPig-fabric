@@ -20,6 +20,6 @@ public class SnowPigEntityTypes {
     public static void registerEntityTypes() {
         FabricDefaultAttributeRegistry.register(SNOW_PIG, SnowPigEntity.createSnowPigAttributes());
 
-        Registry.register(Registries.ENTITY_TYPE, new Identifier(SnowPig.MOD_ID, "snow_pig"), SNOW_PIG);
+        Registry.register(Registries.ENTITY_TYPE, SnowPig.id("snow_pig"), SNOW_PIG);
     }
 }

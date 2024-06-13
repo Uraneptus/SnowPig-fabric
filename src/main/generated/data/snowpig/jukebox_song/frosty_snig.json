@@ -1,0 +1,8 @@
+{
+  "comparator_output": 12,
+  "description": {
+    "translate": "jukebox_song.snowpig.frosty_snig"
+  },
+  "length_in_seconds": 3720.0,
+  "sound_event": "snowpig:music_disc.frosty_snig"
+}

@@ -36,7 +36,8 @@
                 "max": 1.0,
                 "min": 0.0
               },
-              "function": "minecraft:looting_enchant"
+              "enchantment": "minecraft:looting",
+              "function": "minecraft:enchanted_count_increase"
             }
           ],
           "name": "snowpig:frozen_porkchop"
@@ -49,7 +50,7 @@
       "conditions": [
         {
           "condition": "minecraft:entity_properties",
-          "entity": "killer",
+          "entity": "direct_attacker",
           "predicate": {
             "equipment": {
               "mainhand": {
@@ -59,9 +60,12 @@
           }
         },
         {
-          "chance": 0.5,
-          "condition": "minecraft:random_chance_with_looting",
-          "looting_multiplier": 0.1
+          "chance": {
+            "type": "minecraft:uniform",
+            "max": 0.1,
+            "min": 0.5
+          },
+          "condition": "minecraft:random_chance"
         }
       ],
       "entries": [
@@ -77,7 +81,7 @@
       "conditions": [
         {
           "condition": "minecraft:entity_properties",
-          "entity": "killer",
+          "entity": "direct_attacker",
           "predicate": {
             "type": "#snowpig:killer_for_snowpig_disc"
           }

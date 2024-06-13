@@ -27,6 +27,6 @@ public class SnowPigItemTagProvider extends FabricTagProvider<Item> {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
-        getOrCreateTagBuilder(ItemTags.MUSIC_DISCS).add(SnowPigItems.MUSIC_DISC_FROSTY_SNIG);
+
     }
 }

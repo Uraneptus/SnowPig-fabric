@@ -9,7 +9,7 @@ import net.uraneptus.snowpig.SnowPig;
 
 public class SnowPigItemTags {
 
-    public static final TagKey<Item> KNIVES = of(new Identifier("c", "tools/knives"));
+    public static final TagKey<Item> KNIVES = of(Identifier.of("c", "tools/knives"));
 
 
     private static TagKey<Item> of(String id) {

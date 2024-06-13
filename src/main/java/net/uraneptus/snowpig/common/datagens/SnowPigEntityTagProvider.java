@@ -28,6 +28,6 @@ public class SnowPigEntityTagProvider extends FabricTagProvider<EntityType<?>> {
     protected void configure(RegistryWrapper.WrapperLookup arg) {
         getOrCreateTagBuilder(SnowPigEntityTags.KILLER_FOR_SNOWPIG_DISC)
                 .add(EntityType.STRAY)
-                .addOptional(new Identifier("tinyskeletons:baby_stray"));
+                .addOptional(Identifier.of("tinyskeletons:baby_stray"));
     }
 }

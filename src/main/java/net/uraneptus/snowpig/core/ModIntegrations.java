@@ -8,11 +8,11 @@ import net.minecraft.util.Identifier;
 
 public class ModIntegrations {
     public static boolean isFDLoaded() {
-        return FabricLoader.getInstance().getModContainer("farmersdelight").isPresent();
+        return FabricLoader.getInstance().isModLoaded("farmersdelight");
     }
 
     public static RegistryKey<ItemGroup> getFdItemGroup() {
-        return RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier("farmersdelight", "main"));
+        return RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of("farmersdelight", "main"));
     }
 //
 //    public static Item getHam(){

@@ -22,9 +22,6 @@ public class SnowPigRecipeProvider extends FabricRecipeProvider {
     @Override
     public void generate(RecipeExporter exporter) {
         registerCookables(exporter, SnowPigItems.FROZEN_PORKCHOP, Items.PORKCHOP, 0.2F);
-//        if (ModIntegrations.isFDLoaded()){
-//            registerCookables(exporter, SnowPigItems.FROZEN_HAM, ModIntegrations.getHam(), 0.2F);
-//        }
     }
 
 
