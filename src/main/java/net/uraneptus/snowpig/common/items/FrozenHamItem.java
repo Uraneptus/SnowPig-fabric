@@ -5,7 +5,6 @@ import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.item.ItemStack;
 import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.uraneptus.snowpig.core.ModIntegrations;
 
