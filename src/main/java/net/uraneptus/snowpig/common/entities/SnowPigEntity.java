@@ -10,11 +10,8 @@ import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.PigEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.uraneptus.snowpig.SnowPig;
-import net.uraneptus.snowpig.core.ModIntegrations;
 import net.uraneptus.snowpig.core.registry.SnowPigSounds;
 
 //TODO create event to access the pig's tick method for the transformation to the snowpig
@@ -41,18 +38,24 @@ public class SnowPigEntity extends PigEntity{
                 .add(EntityAttributes.GENERIC_ARMOR, 0.5D);
     }
 
+
     @Override
     public float getMovementSpeed() {
         return super.getMovementSpeed() / 6;
     }
 
-    public SoundEvent getAmbientSound() {
+    @Override
+    protected SoundEvent getAmbientSound() {
         return SnowPigSounds.SNOW_PIG_AMBIENT;
     }
-    public SoundEvent getHurtSound(DamageSource source) {
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource source) {
         return SnowPigSounds.SNOW_PIG_HURT;
     }
-    public SoundEvent getDeathSound() {
+
+    @Override
+    protected SoundEvent getDeathSound() {
         return SnowPigSounds.SNOW_PIG_DEATH;
     }
     protected void playStepSound(BlockPos pos, BlockState state) {

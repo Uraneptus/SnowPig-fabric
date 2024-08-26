@@ -1,0 +1,13 @@
+{
+  "entity.snowpig.snow_pig": "Snow Pig",
+  "item.snowpig.frozen_ham": "Frozen Ham",
+  "item.snowpig.frozen_porkchop": "Frozen Porkchop",
+  "item.snowpig.music_disc_frosty_snig": "Music Disc",
+  "item.snowpig.snow_pig_spawn_egg": "Snow Pig Spawn Egg",
+  "jukebox_song.snowpig.frosty_snig": "Luz - Frosty Snig",
+  "subtitles.snowpig.entity.snow_pig.ambient": "Snow Pig oinks",
+  "subtitles.snowpig.entity.snow_pig.death": "Snow Pig dies",
+  "subtitles.snowpig.entity.snow_pig.hurt": "Snow Pig hurts",
+  "tag.entity_type.snowpig.killer_for_snowpig_disc": "Killer for Snow Pig Disc",
+  "tag.worldgen.biome.snowpig.spawns_snow_pig": "Spawns Snow Pig"
+}

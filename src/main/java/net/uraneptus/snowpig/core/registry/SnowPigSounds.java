@@ -26,7 +26,6 @@ public class SnowPigSounds {
         return registerReference(SnowPig.id(id), SnowPig.id(id));
     }
 
-
     private static RegistryEntry.Reference<SoundEvent> registerReference(Identifier id, Identifier soundId) {
         return Registry.registerReference(Registries.SOUND_EVENT, id, SoundEvent.of(soundId));
     }

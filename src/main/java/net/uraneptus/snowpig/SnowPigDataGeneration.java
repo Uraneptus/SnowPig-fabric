@@ -20,6 +20,7 @@ public class SnowPigDataGeneration implements DataGeneratorEntrypoint {
         pack.addProvider(SnowPigItemTagProvider::new);
         pack.addProvider(SnowPigRecipeProvider::new);
         pack.addProvider(SnowPigJukeboxSongProvider::new);
+        pack.addProvider(SnowPigLanguageProvider::new);
     }
 
     @Override

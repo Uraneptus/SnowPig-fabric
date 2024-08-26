@@ -14,8 +14,4 @@ public class ModIntegrations {
     public static RegistryKey<ItemGroup> getFdItemGroup() {
         return RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of("farmersdelight", "main"));
     }
-//
-//    public static Item getHam(){
-//        return ItemsRegistry.HAM.get();
-//    }
 }

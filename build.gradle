@@ -114,7 +114,9 @@ unifiedPublishing {
 	project {
 		displayName = "${project.minecraft_version}-${project.mod_version}" // Optional, name of the file
 		changelog = '''<ul>
-  <li>Fixed Frozen Ham not giving the correct amount of freezing.</li>
+  <li>Frosty Snig length is now listed correctly.</li>
+  <li>Frozen Ham will now be in the Farmer's Delight itemgroup if the mod is present.</li>
+  <li>Added translations for tags.</li>
 </ul> '''
 		releaseType = "release" // Optional, use "release", "beta" or "alpha"
 		gameVersions = ["${project.minecraft_version}"]
