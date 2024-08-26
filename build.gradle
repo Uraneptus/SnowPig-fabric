@@ -119,7 +119,7 @@ unifiedPublishing {
   <li>Added translations for tags.</li>
 </ul> '''
 		releaseType = "release" // Optional, use "release", "beta" or "alpha"
-		gameVersions = ["${project.minecraft_version}"]
+		gameVersions = ["${project.minecraft_version}", "1.21.1"]
 		gameLoaders = ["fabric"]
 
 		mainPublication tasks.remapJar // Declares the publicated jar
