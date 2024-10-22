@@ -3,12 +3,9 @@ package net.uraneptus.snowpig.common.datagens;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.item.Item;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.ItemTags;
-import net.uraneptus.snowpig.core.registry.SnowPigItems;
+import net.uraneptus.snowpig.core.tags.SnowPigItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -27,6 +24,6 @@ public class SnowPigItemTagProvider extends FabricTagProvider<Item> {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
-
+        getOrCreateTagBuilder(SnowPigItemTags.KNIVES);
     }
 }

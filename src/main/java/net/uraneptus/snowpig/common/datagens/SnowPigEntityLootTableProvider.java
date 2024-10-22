@@ -60,9 +60,7 @@ public class SnowPigEntityLootTableProvider extends SimpleFabricLootTableProvide
                  */
                 .pool(LootPool.builder().with(ItemEntry.builder(SnowPigItems.FROZEN_HAM))
                         .conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityTarget.DIRECT_ATTACKER, EntityPredicate.Builder.create().equipment(EntityEquipmentPredicate.Builder.create().mainhand(ItemPredicate.Builder.create().tag(registryLookup.getOrThrow(RegistryKeys.ITEM), SnowPigItemTags.KNIVES)).build())))
-                        .conditionally(RandomChanceLootCondition.builder(UniformLootNumberProvider.create(0.5F, 0.1F)))
-                        .build())
-
+                        .conditionally(RandomChanceLootCondition.builder(UniformLootNumberProvider.create(0.5F, 0.1F))))
                 /*
                     Music Disc Pool
                  */
