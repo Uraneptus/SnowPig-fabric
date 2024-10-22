@@ -30,19 +30,15 @@ public class SnowPigEntity extends PigEntity{
 
     }
 
+
     public static DefaultAttributeContainer.Builder createSnowPigAttributes() {
-        return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.15D)
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 10.0D)
-                .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 0.3D)
-                .add(EntityAttributes.GENERIC_ARMOR, 0.5D);
+        return createPigAttributes()
+                .add(EntityAttributes.MOVEMENT_SPEED, 0.15D)
+                .add(EntityAttributes.MAX_HEALTH, 10.0D)
+                .add(EntityAttributes.KNOCKBACK_RESISTANCE, 0.3D)
+                .add(EntityAttributes.ARMOR, 0.5D);
     }
 
-
-    @Override
-    public float getMovementSpeed() {
-        return super.getMovementSpeed() / 6;
-    }
 
     @Override
     protected SoundEvent getAmbientSound() {

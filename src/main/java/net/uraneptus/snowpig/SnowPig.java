@@ -33,7 +33,7 @@ public class SnowPig implements ModInitializer {
 
 		addMobSpawn(SnowPigBiomeTags.SPAWNS_SNOW_PIG, SpawnGroup.CREATURE, SnowPigEntityTypes.SNOW_PIG, 20, 1, 4);
 
-		FabricDefaultAttributeRegistry.register(SnowPigEntityTypes.SNOW_PIG, SnowPigEntity.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(SnowPigEntityTypes.SNOW_PIG, SnowPigEntity.createSnowPigAttributes());
 
 		log(Level.INFO, "Snowing The Pig!");
 	}

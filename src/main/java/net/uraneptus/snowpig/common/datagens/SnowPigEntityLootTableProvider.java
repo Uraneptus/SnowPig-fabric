@@ -2,6 +2,7 @@ package net.uraneptus.snowpig.common.datagens;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.SimpleFabricLootTableProvider;
+import net.minecraft.entity.EntityType;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.EntityPropertiesLootCondition;
@@ -18,7 +19,9 @@ import net.minecraft.predicate.entity.EntityEquipmentPredicate;
 import net.minecraft.predicate.entity.EntityFlagsPredicate;
 import net.minecraft.predicate.entity.EntityPredicate;
 import net.minecraft.predicate.item.ItemPredicate;
+import net.minecraft.registry.RegistryEntryLookup;
 import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.uraneptus.snowpig.core.registry.SnowPigEntityTypes;
 import net.uraneptus.snowpig.core.registry.SnowPigItems;
@@ -40,7 +43,8 @@ public class SnowPigEntityLootTableProvider extends SimpleFabricLootTableProvide
 
     @Override
     public void accept(BiConsumer<RegistryKey<LootTable>, LootTable.Builder> consumer) {
-        consumer.accept(SnowPigEntityTypes.SNOW_PIG.getLootTableId(), LootTable.builder()
+        RegistryEntryLookup<EntityType<?>> entityTypeRegistry = registryLookup.getOrThrow(RegistryKeys.ENTITY_TYPE);
+        consumer.accept(SnowPigEntityTypes.SNOW_PIG.getLootTableKey().get(), LootTable.builder()
                 /*
                     Frozen Porkchop Pool
                  */
@@ -55,7 +59,7 @@ public class SnowPigEntityLootTableProvider extends SimpleFabricLootTableProvide
                     Frozen Ham Pool
                  */
                 .pool(LootPool.builder().with(ItemEntry.builder(SnowPigItems.FROZEN_HAM))
-                        .conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityTarget.DIRECT_ATTACKER, EntityPredicate.Builder.create().equipment(EntityEquipmentPredicate.Builder.create().mainhand(ItemPredicate.Builder.create().tag(SnowPigItemTags.KNIVES)).build())))
+                        .conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityTarget.DIRECT_ATTACKER, EntityPredicate.Builder.create().equipment(EntityEquipmentPredicate.Builder.create().mainhand(ItemPredicate.Builder.create().tag(registryLookup.getOrThrow(RegistryKeys.ITEM), SnowPigItemTags.KNIVES)).build())))
                         .conditionally(RandomChanceLootCondition.builder(UniformLootNumberProvider.create(0.5F, 0.1F)))
                         .build())
 
@@ -64,7 +68,7 @@ public class SnowPigEntityLootTableProvider extends SimpleFabricLootTableProvide
                  */
                 .pool(LootPool.builder().with(ItemEntry.builder(SnowPigItems.MUSIC_DISC_FROSTY_SNIG))
                         .conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityTarget.DIRECT_ATTACKER,
-                                EntityPredicate.Builder.create().type(SnowPigEntityTags.KILLER_FOR_SNOWPIG_DISC))))
+                                EntityPredicate.Builder.create().type(entityTypeRegistry, SnowPigEntityTags.KILLER_FOR_SNOWPIG_DISC))))
         );
     }
 }

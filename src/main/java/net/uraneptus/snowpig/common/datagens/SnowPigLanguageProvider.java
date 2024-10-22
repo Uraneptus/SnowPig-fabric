@@ -38,6 +38,6 @@ public class SnowPigLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("jukebox_song." + song.getValue().toTranslationKey(), value);
     }
     private static void soundTranslation(TranslationBuilder translationBuilder, SoundEvent sound, String value){
-        translationBuilder.add("subtitles." + sound.getId().toTranslationKey(), value);
+        translationBuilder.add("subtitles." + sound.id().toTranslationKey(), value);
     }
 }
