@@ -25,8 +25,8 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.uraneptus.snowpig.core.registry.SnowPigEntityTypes;
 import net.uraneptus.snowpig.core.registry.SnowPigItems;
-import net.uraneptus.snowpig.core.tags.SnowPigEntityTags;
-import net.uraneptus.snowpig.core.tags.SnowPigItemTags;
+import net.uraneptus.snowpig.core.registry.tags.SnowPigEntityTags;
+import net.uraneptus.snowpig.core.registry.tags.SnowPigItemTags;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.BiConsumer;

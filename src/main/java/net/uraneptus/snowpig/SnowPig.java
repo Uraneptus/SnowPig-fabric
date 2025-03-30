@@ -13,7 +13,7 @@ import net.uraneptus.snowpig.common.entities.SnowPigEntity;
 import net.uraneptus.snowpig.core.registry.SnowPigEntityTypes;
 import net.uraneptus.snowpig.core.registry.SnowPigItems;
 import net.uraneptus.snowpig.core.registry.SnowPigSounds;
-import net.uraneptus.snowpig.core.tags.SnowPigBiomeTags;
+import net.uraneptus.snowpig.core.registry.tags.SnowPigBiomeTags;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -31,8 +31,6 @@ public class SnowPig implements ModInitializer {
 		SnowPigSounds.registerSounds();
 
 		addMobSpawn(SnowPigBiomeTags.SPAWNS_SNOW_PIG, SpawnGroup.CREATURE, SnowPigEntityTypes.SNOW_PIG, 20, 1, 4);
-
-		FabricDefaultAttributeRegistry.register(SnowPigEntityTypes.SNOW_PIG, SnowPigEntity.createSnowPigAttributes());
 
 		log(Level.INFO, "Snowing The Pig!");
 	}

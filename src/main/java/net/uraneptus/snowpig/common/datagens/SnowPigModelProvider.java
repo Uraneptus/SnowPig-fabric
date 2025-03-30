@@ -22,6 +22,6 @@ public class SnowPigModelProvider extends FabricModelProvider {
         itemModelGenerator.register(SnowPigItems.FROZEN_HAM, Models.HANDHELD);
         itemModelGenerator.register(SnowPigItems.FROZEN_PORKCHOP, Models.GENERATED);
         itemModelGenerator.register(SnowPigItems.MUSIC_DISC_FROSTY_SNIG, Models.GENERATED);
-        itemModelGenerator.registerSpawnEgg(SnowPigItems.SNOW_PIG_SPAWN_EGG, 0x70CFF3, 0xE2FBFA);
+        itemModelGenerator.register(SnowPigItems.SNOW_PIG_SPAWN_EGG, Models.GENERATED);
     }
 }

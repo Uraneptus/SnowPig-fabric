@@ -1,4 +1,4 @@
-package net.uraneptus.snowpig.core.tags;
+package net.uraneptus.snowpig.core.registry.tags;
 
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;

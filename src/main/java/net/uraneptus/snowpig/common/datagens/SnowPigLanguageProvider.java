@@ -10,8 +10,8 @@ import net.uraneptus.snowpig.core.registry.SnowPigEntityTypes;
 import net.uraneptus.snowpig.core.registry.SnowPigItems;
 import net.uraneptus.snowpig.core.registry.SnowPigJukeboxSongs;
 import net.uraneptus.snowpig.core.registry.SnowPigSounds;
-import net.uraneptus.snowpig.core.tags.SnowPigBiomeTags;
-import net.uraneptus.snowpig.core.tags.SnowPigEntityTags;
+import net.uraneptus.snowpig.core.registry.tags.SnowPigBiomeTags;
+import net.uraneptus.snowpig.core.registry.tags.SnowPigEntityTags;
 
 import java.util.concurrent.CompletableFuture;
 

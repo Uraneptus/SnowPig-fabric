@@ -1,4 +1,4 @@
-package net.uraneptus.snowpig.core.tags;
+package net.uraneptus.snowpig.core.registry.tags;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.registry.RegistryKeys;
@@ -7,6 +7,7 @@ import net.uraneptus.snowpig.SnowPig;
 
 public class SnowPigEntityTags {
     public static final TagKey<EntityType<?>> KILLER_FOR_SNOWPIG_DISC = of("killer_for_snowpig_disc");
+    public static final TagKey<EntityType<?>> CONVERTS_TO_SNOW_PIG = of("converts_to_snow_pig");
 
 
     private static TagKey<EntityType<?>> of(String id) {

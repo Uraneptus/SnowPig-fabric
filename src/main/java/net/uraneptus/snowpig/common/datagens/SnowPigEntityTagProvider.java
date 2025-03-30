@@ -6,7 +6,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
-import net.uraneptus.snowpig.core.tags.SnowPigEntityTags;
+import net.uraneptus.snowpig.core.registry.tags.SnowPigEntityTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -29,5 +29,6 @@ public class SnowPigEntityTagProvider extends FabricTagProvider<EntityType<?>> {
         getOrCreateTagBuilder(SnowPigEntityTags.KILLER_FOR_SNOWPIG_DISC)
                 .add(EntityType.STRAY)
                 .addOptional(Identifier.of("tinyskeletons:baby_stray"));
+        getOrCreateTagBuilder(SnowPigEntityTags.CONVERTS_TO_SNOW_PIG).add(EntityType.PIG);
     }
 }
