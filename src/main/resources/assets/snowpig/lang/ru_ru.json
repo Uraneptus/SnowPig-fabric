@@ -1,0 +1,11 @@
+{
+  "entity.snowpig.snow_pig": "Снежная свинья",
+  "item.snowpig.frozen_ham": "Замороженная ветчина",
+  "item.snowpig.frozen_porkchop": "Замороженная свинина",
+  "item.snowpig.music_disc_frosty_snig": "Пластинка",
+  "item.snowpig.music_disc_frosty_snig.desc": "Luz - Frosty Snig",
+  "item.snowpig.snow_pig_spawn_egg": "Яйцо призыва снежной свиньи",
+  "subtitles.entity.snow_pig.ambient": "Снежная свинья хрюкает",
+  "subtitles.entity.snow_pig.death": "Снежная свинья погибает",
+  "subtitles.entity.snow_pig.hurt": "Снежная свинья ранена"
+}
