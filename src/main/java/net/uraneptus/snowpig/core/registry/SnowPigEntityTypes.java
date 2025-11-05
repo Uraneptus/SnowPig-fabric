@@ -16,7 +16,7 @@ public class SnowPigEntityTypes {
             .dimensions(0.9f, 0.9f).build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, SnowPig.id("snow_pig")));
 
 
-    public static void registerEntityTypes() {
+    public static void init() {
         FabricDefaultAttributeRegistry.register(SNOW_PIG, SnowPigEntity.createSnowPigAttributes());
 
         Registry.register(Registries.ENTITY_TYPE, SnowPig.id("snow_pig"), SNOW_PIG);

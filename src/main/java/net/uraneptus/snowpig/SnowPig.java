@@ -3,13 +3,11 @@ package net.uraneptus.snowpig;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.Biome;
-import net.uraneptus.snowpig.common.entities.SnowPigEntity;
 import net.uraneptus.snowpig.core.registry.SnowPigEntityTypes;
 import net.uraneptus.snowpig.core.registry.SnowPigItems;
 import net.uraneptus.snowpig.core.registry.SnowPigSounds;
@@ -27,8 +25,8 @@ public class SnowPig implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		SnowPigItems.init();
-		SnowPigEntityTypes.registerEntityTypes();
-		SnowPigSounds.registerSounds();
+		SnowPigEntityTypes.init();
+		SnowPigSounds.init();
 
 		addMobSpawn(SnowPigBiomeTags.SPAWNS_SNOW_PIG, SpawnGroup.CREATURE, SnowPigEntityTypes.SNOW_PIG, 20, 1, 4);
 
